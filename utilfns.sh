@@ -53,7 +53,7 @@ download_if_needed() {
 # https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path
 pathadd() {
     newelement=${1%/}
-    if [ -d "$1" ] && ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
+    if ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
         if [ "$2" = "after" ] ; then
             PATH="$PATH:$newelement"
         else
