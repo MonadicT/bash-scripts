@@ -45,7 +45,9 @@ npm_install_if_needed() {
 # Returns:
 #   Nothing
 download_if_needed() {
-    if [ -z ${DOWNLOAD_DIR}/$1 ]; then
+    local f=$1
+    f=${f##*/}
+    if [ ! -e ${DOWNLOAD_DIR}/$f ]; then
         wget -P ${DOWNLOAD_DIR} $1
     fi
 }
