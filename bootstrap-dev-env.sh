@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Bootstarap development environment on a new compute node
-
-sudo apt-get update && sudo apt-get install emacs git unzip
+ 
+sudo apt-get update && sudo apt-get install emacs git unzip tightvncserver
 
 if [[ ! -d ~/dot-emacs ]] 
 then
@@ -10,3 +10,4 @@ then
 else
 	(cd ~/dot-emacs && git pull)
 fi
+
