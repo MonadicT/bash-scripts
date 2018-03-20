@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Bootstarap development environment on a new compute node
- 
+# Bootstrap development environment on a new compute node
 sudo apt-get update && sudo apt-get install emacs git unzip tightvncserver
 
 if [[ ! -d ~/dot-emacs ]] 
