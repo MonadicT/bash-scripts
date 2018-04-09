@@ -1,4 +1,4 @@
-/bin#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 #
 # This script installs Android SDK manager
@@ -14,7 +14,7 @@ fi
 
 source $SCRIPTS_DIR/utilfns.sh
 
-OS=linux
+OS=darwin
 ARCH=x64 # No way to determine this!
 
 ANDROID_SDK_VERSION=3859397
@@ -67,7 +67,7 @@ npm_install_if_needed -g react-native-cli
 echo "PATH IS" $PATH
 
 # aapt needs these 32-bit libs
-sudp apt-get install lib32stdc++6 lib32c1
+sudo apt-get install lib32stdc++6 lib32c1
 
 # Environment vars to source
 echo export ANDROID_HOME=$INSTALL_DIR > set_android_vars.sh
